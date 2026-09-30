@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MindLink - Contact Us</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Internal CSS for the Contact Page -->
+ <style>
+  
+    header h1 {
+      margin: 0;
+      font-size: 1.8rem;
+      letter-spacing: 1.5px;
+    }
+
+    main {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 30px;
+      padding: 40px;
+    }
+
+    /* Contact form container */
+    .contact-form {
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      padding: 30px;
+      width: 400px;
+      animation: fadeIn 1.5s ease;
+    }
+    .contact-form:hover{
+      box-shadow: 0 6px 15px #FFD700;
+      transform: scale(1.03);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .contact-form h2 {
+      text-align: center;
+      color: #0a58ca;
+      margin-bottom: 20px;
+    }
+
+    .contact-form label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 6px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+      transition: border-color 0.3s;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      border-color: #0a58ca;
+      outline: none;
+    }
+
+    .contact-form button {
+      background-color: #0a58ca;
+      color: white;
+      border: none;
+      width: 100%;
+      padding: 12px;
+      margin-top: 15px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .contact-form button:hover {
+      background-color: #084298;
+    }
+
+    /* Right-side contact info */
+    .contact-info {
+       background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      padding: 30px;
+      width: 400px;
+      animation: fadeIn 1.5s ease;
+      max-width: 300px;
+  
+    }
+    .contact-info:hover{
+      box-shadow: 0 6px 15px rgba(15, 107, 245, 0.877);
+      transform: scale(1.03);
+    }
+
+    .contact-info h3 {
+      color: #0a58ca;
+    }
+
+    .contact-info p {
+      line-height: 1.6;
+    }
+
+    .social-links a {
+      display: inline-block;
+      margin-right: 10px;
+      color: #0a58ca;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .social-links a:hover {
+      text-decoration: underline;
+    }
+
+    
+  </style>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header>
+     <div class="logo">
+      <img src="Bck2.mpg" alt="MindLink Logo">MindLink</div>
+    <h1>MindLink</h1>
+    <p>Your Path to Better Mental Wellness</p>
+    <nav >
+            <a href="index.html">Home</a>
+            <a href="resources.html">Resources</a>
+            <a href="mood.html">Mood Tracker</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="login.html">Login/sign Up</a>
+        </nav>
+
+
+  </header>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main>
+    <!-- Contact Form Section -->
+    <section class="contact-form">
+      <h2>Contact Us</h2>
+      <form action="#" method="post">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" placeholder="+256 700 000000" required>
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+
+    <!-- Contact Info Section -->
+    <aside class="contact-info">
+      <h3>Get in Touch</h3>
+      <p><strong>Office Address:</strong><br>
+      Busitema University, ICT Department</p>
+
+      <p><strong>Phone:</strong><br>
+      +256 773 065 029</p>
+
+      <p><strong>Email:</strong><br>
+      ebaleemmanuel20@gmail.com</p>
+
+      <div class="social-links">
+        <h4>Follow Us:</h4>
+        <a href="#">Facebook</a>
+        <a href="#">Twitter</a>
+        <a href="#">Instagram</a>
+      </div>
+    </aside>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>&copy;<span id="year"></span> MindLink Project by Ebale Emmanuel | All Rights Reserverd</p>
+  </footer>
+<script src="script.js"></script>
+</body>
+</html>

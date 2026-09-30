@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MindLink - Resources</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Internal CSS for unique page design -->
+  <style>
+    .resources {
+      animation: fadeSlide 2s ease;
+    }
+
+    @keyframes fadeSlide {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Make resource boxes glow slightly when hovered */
+    .resource-item:hover,
+    .media-item:hover,
+    .profile-card:hover {
+      box-shadow: 0 6px 15px #FFD700;
+      transform: scale(1.03);
+    }
+
+    /* Add smooth transitions */
+    .resource-item,
+    .media-item,
+    .profile-card {
+      transition: all 0.4s ease-in-out;
+    }
+
+    /* Multimedia border highlight */
+    video, audio {
+      border: 2px solid #0a58ca;
+      border-radius: 8px;
+      margin-top: 10px;
+    }
+
+    /* Profile section animation */
+    .profile-card {
+      animation: pulse 4s infinite alternate ease-in-out;
+    }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 10px rgba(10, 88, 202, 0.1); }
+      100% { box-shadow: 0 0 20px rgba(10, 88, 202, 0.4); }
+    }
+  </style>
+</head>
+
+<body>
+  <script type="text/javascript">
+    alert(" Alert!Welcome to the resources page clik!OK to continue");
+  </script>
+  <header>
+    <div class="logo">
+      <img src="Bck2.mpg" alt="MindLink Logo">MindLink</div>
+    <h1>MindLink</h1>
+        <nav >
+            <a href="index.html">Home</a>
+            <a href="resources.html">Resources</a>
+            <a href="mood.html">Mood Tracker</a>
+            <a href="contact.html">Contact</a>
+            <a href="login.html">Login/sign Up</a>
+        </nav>
+    </header>
+
+  <main class="resources">
+    <h2><b> Our Helpful Resources</b></h2>
+    <p><b>Access mental wellness materials, videos, audios, and user profiles for a balanced mind.</b></p>
+
+    <!-- Text Resources -->
+    <section class="text-resources">
+      <h3>📖 Articles & Guides</h3>
+      <div class="resource-item">
+        <h4>Managing Stress Effectively</h4>
+        <p>Learn simple ways to handle stress and stay productive every day.</p>
+        <a href="#">Read More</a>
+      </div>
+      <div class="resource-item">
+        <h4>Understanding Mental Health</h4>
+        <p>Explore the basics of mental health and why it’s important for all ages.</p>
+        <a href="#">Learn More</a>
+      </div>
+    </section>
+
+    <!-- Multimedia -->
+    <section class="media-resources">
+      <h3>🎬 Multimedia Resources</h3>
+
+      <div class="media-item">
+        <h4>Guided Meditation Video</h4>
+        <video width="320" height="240" controls>
+          <source src="Tom and Jerry_ Snowman's Land_360P.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="media-item">
+        <h4>Relaxing Background Audio</h4>
+        <aside><audio controls>
+          <source src="keys-of-moon-under-the-sun.mp3.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio></aside>
+      </div>
+    </section>
+
+    <!-- Profile Section -->
+    <section class="profile-section">
+      <h3>👤 User Profile</h3>
+      <div class="profile-card">
+        <img src="Bck3.mpg" alt="User Profile Picture">
+        <h4>Ebale Emmanuel</h4>
+        <p><strong>Role:</strong> Student Developer</p>
+        <p><strong>Goal:</strong> To use technology to improve mental health awareness</p>
+        <button onclick="editProfile()">Edit Profile</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+        <p>&copy;<span id="year"></span> MindLink Project by Ebale Emmanuel | All Rights Reserverd</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

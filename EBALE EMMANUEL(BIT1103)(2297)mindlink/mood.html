@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MindLink - Mood Tracker</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Internal CSS for Mood Tracker -->
+  <style>
+    main {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin-top: 50px;
+    }
+
+    .mood-container {
+      background-color: white;
+      border-radius: 12px;
+      padding: 30px;
+      width: 400px;
+      text-align: center;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      animation: fadeIn 1.5s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h2 {
+      color: #0a58ca;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin: 10px 0;
+      font-weight: bold;
+    }
+
+    select {
+      width: 100%;
+      padding: 10px;
+      font-size: 1rem;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      margin-bottom: 20px;
+    }
+
+    button {
+      background-color: #0a58ca;
+      color: white;
+      border: none;
+      padding: 12px;
+      width: 100%;
+      font-size: 1.1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #084298;
+    }
+
+    .result {
+      margin-top: 25px;
+      padding: 15px;
+      border-radius: 8px;
+      display: none;
+      font-size: 1.1rem;
+    }
+    footer{
+        position: fixed;
+    }
+
+
+   
+    
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+     <div class="logo">
+      <img src="Bck2.mpg" alt="MindLink Logo">MindLink</div>
+    <h1>MindLink</h1>
+    <p>Track Your Daily Mood</p>
+    <nav >
+            <a href="index.html">Home</a>
+            <a href="resources.html">Resources</a>
+            <a href="mood.html">Mood Tracker</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="login.html">Login/sign Up</a>
+        </nav>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main>
+    <section class="mood-container">
+      <h2>Mood Tracker</h2>
+      <label for="mood">How are you feeling today?</label>
+      <select id="mood">
+        <option value="">Select Mood</option><hr color="black">
+        <option value="happy">😊 Happy</option>
+        <option value="sad">😔 Sad</option>
+        <option value="stressed">😩 Stressed</option>
+        <option value="angry">😠 Angry</option>
+        <option value="relaxed">😌 Relaxed</option>
+      </select>
+      <button onclick="trackMood()">Track Mood</button>
+
+      <div class="result" id="resultBox"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy;<span id="year"></span> MindLink Project by Ebale Emmanuel | All Rights Reserverd</p>
+  </footer>
+   <!--Externale Javascript-->
+   <script src="script.js"></script>
+  <!-- INTERNAL JAVASCRIPT -->
+  <script>
+    function trackMood() {
+      const mood = document.getElementById("mood").value;
+      const resultBox = document.getElementById("resultBox");
+
+      if (mood === "") {
+        resultBox.style.display = "block";
+        resultBox.style.backgroundColor = "#ffdddd";
+        resultBox.innerText = "⚠ Please select your mood before submitting.";
+        return;
+      }
+
+      let message = "";
+      let color = "";
+
+      switch (mood) {
+        case "happy":
+          message = "😊 That’s awesome! Keep spreading your positive energy!";
+          color = "#d4edda";
+          break;
+        case "sad":
+          message = "😔 It’s okay to feel sad sometimes. Take a deep breath — tomorrow will be better.";
+          color = "#fff3cd";
+          break;
+        case "stressed":
+          message = "😩 Don’t forget to rest and take a walk. You’re stronger than your stress.";
+          color = "#fde2e4";
+          break;
+        case "angry":
+          message = "😠 Try listening to calm music or stepping away to cool down. Peace matters most.";
+          color = "#f8d7da";
+          break;
+        case "relaxed":
+          message = "😌 Keep enjoying your peace and share good vibes with others!";
+          color = "#d1ecf1";
+          break;
+      }
+
+      // Display feedback
+      resultBox.style.display = "block";
+      resultBox.style.backgroundColor = color;
+      resultBox.innerText = message;
+    }
+  </script>
+</body>
+</html>

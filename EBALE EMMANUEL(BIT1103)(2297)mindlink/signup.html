@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MindLink - Sign Up</title>
+  <!--External css-->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Internal CSS -->
+  <style>
+    main {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .signup-box {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      width: 380px;
+      animation: fadeIn 1s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(15px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h2 {
+      text-align: center;
+      color: #0a58ca;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin: 10px 0 5px;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+      transition: border-color 0.3s;
+    }
+
+    input:focus {
+      border-color: #0a58ca;
+      outline: none;
+    }
+
+    .terms {
+      margin: 10px 0;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.9rem;
+    }
+
+    button {
+      background-color: #0a58ca;
+      color: white;
+      border: none;
+      padding: 12px;
+      width: 100%;
+      font-size: 1.1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #084298;
+    }
+
+    .login-link {
+      text-align: center;
+      margin-top: 15px;
+    }
+
+    .login-link a {
+      color: #0a58ca;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .login-link a:hover {
+      text-decoration: underline;
+    }
+
+    #feedback {
+      text-align: center;
+      margin-top: 15px;
+      display: none;
+      padding: 10px;
+      border-radius: 6px;
+      font-size: 0.95rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">
+      <img src="Bck2.mpg" alt="MindLink Logo">MindLink</div>
+    <h1>MindLink</h1>
+    <p>Create a New Account</p>
+  </header>
+
+  <!-- SIGN UP FORM -->
+  <main>
+    <div class="signup-box">
+      <h2>Sign Up</h2>
+      <form onsubmit="return registerUser(event)">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" placeholder="Enter your name" required>
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" placeholder="example@gmail.com" required>
+
+         <label for="Nationality">Nationality</label>
+            <select name="country">
+            <option value=""></option>
+            <option value="UGANDA">UGANDA</option>
+            <option value="TANZANIA">TANZANIA</option>
+            <option value="KENYA">KENYA</option>
+            <option value="RWANDA">RWANDA</option>
+            <option value="BURUNDI">BURUNDI</option>
+            <option value="SOUTH SUDADN">SOUTHSUDAN</option>
+            </select>
+
+            <label for="Gender">Gender</label>
+            <p>Female</p>
+            <input type="radio" id="Gender" name="Gender" value="Gender">
+            <p>Male</p>
+            <input type="radio" id="Gender" name="Gender" value="Gender">
+
+
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" placeholder="Create password" required>
+
+        <label for="confirm">Confirm Password:</label>
+        <input type="password" id="confirm" placeholder="Confirm password" required>
+
+        <div class="terms">
+          <input type="checkbox" id="agree" required>
+          <label for="agree">I agree to the Terms and Conditions</label>
+        </div>
+
+        <button type="submit">Sign Up</button>
+      </form>
+
+      <div id="feedback"></div>
+
+      <div class="login-link">
+        <p>Already have an account? <a href="login.html">Login</a></p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy;<span id="year"></span> MindLink by Ebale Emmanuel | All Rights Reserved</p>
+  </footer>
+  <!--External Javascript file-->
+    <script src="script.js"></script>
+
+  <!-- INTERNAL JAVASCRIPT -->
+
+</body>
+</html>
